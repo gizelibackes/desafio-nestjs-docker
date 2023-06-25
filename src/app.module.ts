@@ -4,7 +4,7 @@ import { AppService } from './app.service';
 import { PrismaModule } from './prisma/prisma.module';
 import { AssetsModule } from './assets/assets.module';
 
-@Module({ //Decorator
+@Module({
   imports: [PrismaModule, AssetsModule],
   controllers: [AppController],
   providers: [AppService],

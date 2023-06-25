@@ -1,4 +1,4 @@
-import { Controller } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AssetsService } from './assets.service';
 
 @Controller('assets')
@@ -11,7 +11,7 @@ export class AssetsController {
   }
 
   @Post()
-  create(@Body() body: { id: string; symbol: string}) {
+  create(@Body() body: { id: string; symbol: string }) {
     return this.assetsService.create(body);
   }
 }
